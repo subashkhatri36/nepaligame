@@ -1,0 +1,61 @@
+name: nepaligame
+description: A new Flutter project.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons: ^1.0.2
+  audioplayers: ^4.0.1
+  go_router: ^7.0.0
+  logging: ^1.1.1
+  shared_preferences: ^2.1.0
+  firebase_core: ^2.10.0
+  firebase_crashlytics: ^3.1.2
+  google_mobile_ads: ^3.0.0
+  in_app_purchase: ^3.1.5
+  games_services: ^3.0.1
+  bloc: ^8.1.1
+  flutter_bloc: ^8.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+     - assets/
+     - assets/images/
+     - assets/music/
+     - assets/json/
+     - assets/sfx/
+#assets/images/icon.png
+  fonts:
+     - family: kalam
+       fonts:
+         - asset: assets/kalam/Kalam-Bold.ttf
+         - asset: assets/kalam/Kalam-Light.ttf
+         - asset: assets/kalam/Kalam-Regular.ttf
+           weight: 500
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/icon.png"
