@@ -1,11 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:nepaligame/features/flashgame/flash_game_page.dart';
+import 'package:nepaligame/features/splash/splash_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  if(!kIsWeb){
+  if (!kIsWeb) {
     MobileAds.instance.initialize();
   }
   runApp(const MyApp());
@@ -22,10 +22,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-      home: const FlashGamePage(),
+      home: const SplashPage(),
     );
   }
 }
