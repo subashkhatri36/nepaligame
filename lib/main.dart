@@ -1,14 +1,22 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:nepaligame/features/splash/splash_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   if (!kIsWeb) {
     MobileAds.instance.initialize();
+    SystemChrome.setPreferredOrientations(
+            [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight])
+        .then((_) {
+      runApp(const MyApp());
+    });
+  } else {
+    runApp(const MyApp());
   }
-  runApp(const MyApp());
 }
 //for ios
 //banner ca-app-pub-5946802346170399/3012651810
